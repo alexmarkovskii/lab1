@@ -3,6 +3,7 @@
 
 <img src="https://github.com/alexmarkovskii/lab1/blob/main/pong.gif" data-canonical-src="https://github.com/alexmarkovskii/lab1/blob/main/pong.gif" width="800" height="300" />
 
+* [Функцианальные модели] (docs/description.md)
 
 ## Пользователь может:
 - Запустить игру в одном из двух режимов(против компьютера или против другого пользователя) и выбрать один из двух типов игры.
