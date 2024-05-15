@@ -1,0 +1,12 @@
+# Структурные модели
+
+## Диаграмма классов приложения
+
+ - **GAME_MENU**: класс основного окна запуска приложения, содержит метод run(), используемый для настройки игры и её запуска.
+ - **BUTTON**: класс кнопок, используемых в основном окне приложения.
+ - **PADLE**: класс, используемый для описания ракеток, которыми управляет пользоваетль.
+ - **GAME**: класс запуска игры, содержит в себе методы необходимые для инициализации и работы игры, включая сам игровой цикл.
+
+[![](https://mermaid.ink/img/pako:eNqVlE1PwzAMhv9KldPQPiQ4VghpaIMLGwi2W6Uoa8yISJvKSTemaf-dNGnpx4oGObTN-zhxbMc9klhxICGJJdN6JtgWWRKlgR1OCR6nizldzJfr4OjlYugYAdIwyA5blsCEC51Jdqj5JjdGpToM7ter1fOyBkPM08GVn5-abrxh0wdCbH48vNpJjWIlFYaByTMJtfqu0npBMZk82EfNDXx1OELKAdsW1Pvt7D3kyPbUhzXw0fdF8TKdzZ7m7UwphDAQzYPoDIB3NA7vLJeV996of0H2AN16_adU7oD0Uu60YWioy88l04xxLuE6LJPRBTfnYMOkpH9IgLPr4Y0y5RlnBuhGMeTVPXPArU3UDlqqD4uDzUhLzzUg3Wnq3lKprJdm8Tnbo7D-7b5GaCNi3YI7AfseVlaw7rTgdjyuOqIg5bUaj--cUdu4VsmIJIAJE9z2s7sCETEfkEBEQvvJGX5GJEpP1o7lRr0d0piEBnMYEZ-3sv0rEbgwChfl_6F4nb4BAtZF2A?type=png)](https://mermaid.live/edit#pako:eNqVlE1PwzAMhv9KldPQPiQ4VghpaIMLGwi2W6Uoa8yISJvKSTemaf-dNGnpx4oGObTN-zhxbMc9klhxICGJJdN6JtgWWRKlgR1OCR6nizldzJfr4OjlYugYAdIwyA5blsCEC51Jdqj5JjdGpToM7ter1fOyBkPM08GVn5-abrxh0wdCbH48vNpJjWIlFYaByTMJtfqu0npBMZk82EfNDXx1OELKAdsW1Pvt7D3kyPbUhzXw0fdF8TKdzZ7m7UwphDAQzYPoDIB3NA7vLJeV996of0H2AN16_adU7oD0Uu60YWioy88l04xxLuE6LJPRBTfnYMOkpH9IgLPr4Y0y5RlnBuhGMeTVPXPArU3UDlqqD4uDzUhLzzUg3Wnq3lKprJdm8Tnbo7D-7b5GaCNi3YI7AfseVlaw7rTgdjyuOqIg5bUaj--cUdu4VsmIJIAJE9z2s7sCETEfkEBEQvvJGX5GJEpP1o7lRr0d0piEBnMYEZ-3sv0rEbgwChfl_6F4nb4BAtZF2A)
+
+
