@@ -405,7 +405,6 @@ class GAME():
                 
             # Управление ракетками
             keys = pygame.key.get_pressed()
-            print(keys)
             self.paddle1.move_left(keys)
             self.paddle2.move_right(keys, self.opponent, self.ball.rect)
 
