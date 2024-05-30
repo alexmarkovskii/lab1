@@ -1,6 +1,11 @@
+[![CI/CD GitHub Actions](https://github.com/alexmarkovskii/lab1/actions/workflows/test.yml/badge.svg)](https://github.com/alexmarkovskii/lab1/actions/workflows/app.yml)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=alexmarkovskii&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=alexmarkovskii)
+[![Coverage Status](https://coveralls.io/repos/github/alexmarkovskii/lab1/badge.svg?branch=main)](https://coveralls.io/github/alexmarkovskii/lab1?branch=main)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=alexmarkovskii&metric=bugs)](https://sonarcloud.io/summary/new_code?id=alexmarkovskii)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=alexmarkovskii&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=alexmarkovskii)
+
 # **Pong**
 
-[![Coverage Status](https://coveralls.io/repos/github/alexmarkovskii/lab1/badge.svg?branch=main)](https://coveralls.io/github/alexmarkovskii/lab1?branch=main)
 
 >   *Pong* является простым спортивным симулятором настольного тенниса. Небольшой квадратик, заменяющий пинг-понговый мячик, двигается по экрану по линейной траектории. Если он ударяется о периметр игрового поля, то его траектория изменяется в зависимости от угла столкновения. Если шарик отбивается ракеткой игрока, то его движение дополнительно зависит от скорости и направления движения ракетки. 
 
