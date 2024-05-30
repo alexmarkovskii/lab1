@@ -1,4 +1,7 @@
 # **Pong**
+
+[![Coverage Status](https://coveralls.io/repos/github/alexmarkovskii/lab1/badge.svg?branch=main)](https://coveralls.io/github/alexmarkovskii/lab1?branch=main)
+
 >   *Pong* является простым спортивным симулятором настольного тенниса. Небольшой квадратик, заменяющий пинг-понговый мячик, двигается по экрану по линейной траектории. Если он ударяется о периметр игрового поля, то его траектория изменяется в зависимости от угла столкновения. Если шарик отбивается ракеткой игрока, то его движение дополнительно зависит от скорости и направления движения ракетки. 
 
 <img src="https://github.com/alexmarkovskii/lab1/blob/main/pong.gif" data-canonical-src="https://github.com/alexmarkovskii/lab1/blob/main/pong.gif" width="800" height="300" />
