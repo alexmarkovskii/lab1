@@ -298,7 +298,7 @@ def write_statistics(value):
             with open('statistics.csv', 'w', newline='') as csvfile:
                 csv_writer = csv.writer(csvfile)
                 csv_writer.writerows(sorted_data)
-        except Exception as e:
+        except:
                 with open('statistics.csv', 'a', newline='') as csvfile:
                     csv_writer = csv.writer(csvfile)
                     csv_writer.writerow(value)
@@ -512,7 +512,7 @@ class STAT_MENU():
                         #     with open('statistics.csv', 'w', newline='') as csvfile:
                         #         csv_writer = csv.writer(csvfile)
                         #         csv_writer.writerows(sorted_data)
-                        # except Exception as e:
+                        # except:
                         #     with open('statistics.csv', 'a', newline='') as csvfile:
                         #         csv_writer = csv.writer(csvfile)
                         #         csv_writer.writerow([self.name_box.text, self.time, self.score])
