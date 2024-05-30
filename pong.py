@@ -522,14 +522,6 @@ class STAT_MENU():
                         menu = MENU()
                         menu.draw_menu()
                         break    
-                        
-                        text = self.default_font.render('WRITED!', True, WHITE)
-                        self.stat_screen.blit(text, (self.width//2 - text.get_width()//2, 320))
-                        pygame.display.flip()
-                        pygame.time.delay(2000)
-                        menu = MENU()
-                        menu.draw_menu()
-                        break    
 
                     elif self.name_box.clear_button.rect.collidepoint(event.pos):
                         self.name_box.text = ''
