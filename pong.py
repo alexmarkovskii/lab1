@@ -57,12 +57,9 @@ class BUTTON():
         self.font_size = font_size
         
         self.state = state
-        if self.state == True:
-            self.font = pygame.font.Font(None, self.font_size)
-            self.text_surf = self.font.render(self.text, True, self.color)
-        else:
-            self.font = pygame.font.Font(None, self.font_size)
-            self.text_surf = self.font.render(self.text, True, self.color)
+        self.font = pygame.font.Font(None, self.font_size)
+        self.text_surf = self.font.render(self.text, True, self.color)
+
 
         self.text_rect = (x + width//2 - self.text_surf.get_width()//2, y + height//2 - self.text_surf.get_height()//2)
 
