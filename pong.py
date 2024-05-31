@@ -24,6 +24,7 @@ import sys
 from tkinter.messagebox import showinfo
 from pygame.locals import *
 import csv
+import os
 
 
 class INPUTBOX():
@@ -143,14 +144,14 @@ class MENU():
                             print('missclick')
     
     def draw_stats(self):
-        # self.screen.fill(GRAY)
-        with open('statistics.csv', 'r', newline='') as csvfile:
-            stats = []
-            csv_reader = csv.reader(csvfile)
-            # Чтение и вывод содержимого файла
-            for row in csv_reader:
-                stats.append(row)
-        print(stats)
+        try:
+            print('User', 'Time', 'Score')
+            with open('statistics.csv', 'r', newline='') as csvfile:
+                csv_reader = csv.reader(csvfile)
+                for row in csv_reader:
+                    print(row)      
+        except:
+            showinfo('Ошибка', "Отсутствует файл статистики, не было игр")            
 
     def draw_gamesettings(self):
         self.screen.fill(GRAY)
@@ -487,27 +488,6 @@ class STAT_MENU():
 
                     elif self.name_box.use_button.rect.collidepoint(event.pos):
                         write_statistics([self.name_box.text, self.time, self.score])
-                        # try:
-                        #     with open('statistics.csv', 'a', newline='') as csvfile:
-                        #         csv_writer = csv.writer(csvfile)
-                        #         csv_writer.writerow([self.name_box.text, self.time, self.score])
-                            
-                        #     with open('statistics.csv', 'r', newline='') as csvfile:
-                        #         csv_reader = csv.reader(csvfile)
-                        #         data = list(csv_reader)
-
-                        #     # Сортировка данных по третьему элементу
-                        #     sorted_data = sorted(data, key=lambda x: x[2])
-                        #     sorted_data = sorted_data[::-1]
-
-                        #     # Запись отсортированных данных обратно в CSV файл
-                        #     with open('statistics.csv', 'w', newline='') as csvfile:
-                        #         csv_writer = csv.writer(csvfile)
-                        #         csv_writer.writerows(sorted_data)
-                        # except:
-                        #     with open('statistics.csv', 'a', newline='') as csvfile:
-                        #         csv_writer = csv.writer(csvfile)
-                        #         csv_writer.writerow([self.name_box.text, self.time, self.score])
                         text = self.default_font.render('WRITED!', True, WHITE)
                         self.stat_screen.blit(text, (self.width//2 - text.get_width()//2, 320))
                         pygame.display.flip()
