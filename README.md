@@ -1,8 +1,8 @@
 [![CI/CD GitHub Actions](https://github.com/alexmarkovskii/lab1/actions/workflows/app.yml/badge.svg)](https://github.com/alexmarkovskii/lab1/actions/workflows/app.yml)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=alexmarkovskii_lab1&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=alexmarkovskii_lab1)
-[![Coverage Status](https://coveralls.io/repos/github/alexmarkovskii/lab1/badge.svg?branch=main)](https://coveralls.io/github/alexmarkovskii/lab1?branch=main)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=alexmarkovskii_lab1&metric=bugs)](https://sonarcloud.io/summary/new_code?id=alexmarkovskii_lab1)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=alexmarkovskii_lab1&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=alexmarkovskii_lab1)
+[![Coverage Status](https://coveralls.io/repos/github/alexmarkovskii/lab1/badge.svg?branch=main)](https://coveralls.io/github/alexmarkovskii/lab1?branch=main)
 
 # **Pong**
 
