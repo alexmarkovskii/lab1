@@ -1,21 +1,3 @@
-# Configuration constants
-MENU_WIDTH, MENU_HEIGHT = 1000, 1000
-GAME_WIDTH, GAME_HEIGHT = 1600, 1000
-
-# Параметры ракеток
-PADDLE_WIDTH, PADDLE_HEIGHT = 10, 100
-PADDLE_SPEED = 2
-
-# Параметры мяча
-BALL_SIZE = 50
-BALL_SPEED = 2
-
-WHITE = (255, 255, 255)
-BLACK = (0, 0, 0)
-YELLOW = (255, 255, 0)
-LIME = (150, 235, 100)
-GRAY = (128, 128, 128)
-
 WINDOW_CAPTION = 'pong game, ёпт'
 
 # import dependencies
@@ -23,7 +5,7 @@ import pygame
 import sys
 from tkinter.messagebox import showinfo
 from pygame.locals import *
-from units import BALL, PADDLE, write_statistics
+from units import *
 import csv
 import os
 
