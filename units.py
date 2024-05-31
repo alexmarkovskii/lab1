@@ -1,3 +1,5 @@
+import pygame
+from pygame.locals import *
 
 class PADDLE:
     def __init__(self, x, y, height, width, speed):
