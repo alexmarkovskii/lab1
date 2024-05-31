@@ -1,5 +1,24 @@
 import pygame
 from pygame.locals import *
+import csv
+
+# Configuration constants
+MENU_WIDTH, MENU_HEIGHT = 1000, 1000
+GAME_WIDTH, GAME_HEIGHT = 1600, 1000
+
+# Параметры ракеток
+PADDLE_WIDTH, PADDLE_HEIGHT = 10, 100
+PADDLE_SPEED = 2
+
+# Параметры мяча
+BALL_SIZE = 50
+BALL_SPEED = 2
+
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+YELLOW = (255, 255, 0)
+LIME = (150, 235, 100)
+GRAY = (128, 128, 128)
 
 class PADDLE:
     def __init__(self, x, y, height, width, speed):
