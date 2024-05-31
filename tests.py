@@ -2,6 +2,8 @@ import unittest
 from unittest.mock import patch
 from pong import BALL, PADDLE, write_statistics
 import pygame
+import csv
+import os
 
 # Константы, необходимые для тестов
 PADDLE_WIDTH, PADDLE_HEIGHT = 10, 100
@@ -125,6 +127,41 @@ class TestPaddleMovement(unittest.TestCase):
         # Проверяем, что ракетка не изменила свое положение
         self.assertEqual(self.paddle1.rect.y, previous_position)
 
+
+class TestWriteStatistics(unittest.TestCase):
+    def test_write_new_file(self):
+        # Тестовое значение для записи
+        value = ['User1','25','35']
+        # Если существует файл статистки, удаляем его
+        if os._exists('statistics.csv'):
+            os.remove('statistics.csv')
+
+        # Подготавливаем ожидаемый результат
+        expected_data = [value]
+        # Вызов функции записи в файл
+        data_from_file = write_statistics(value)
+        # Проверка значений
+        self.assertEqual(data_from_file, expected_data)
+        # Удаляем файл после теста
+        os.remove('statistics.csv')
+    
+    def test_write_exitst_file(self):
+        # Создаем csv файл с фиктивной статистикой
+        data_to_write = [['User1', '12','16'], ['User2', '14','14'], ['User3', '16','20']]
+        with open('statistics.csv', 'w', newline='') as csvfile:
+            csv_writer = csv.writer(csvfile)
+            csv_writer.writerows(data_to_write)
+
+        # Тестовое значение для записи
+        value = ['User0','25','35']
+        # Вызов функции записи в файл
+        data_from_file = write_statistics(value)
+        # Подготавливаем ожидаемый результат
+        expected_data = [['User0','25','35'], ['User3', '16','20'], ['User1', '12','16'], ['User2', '14','14']]
+        # Проверка значений
+        self.assertEqual(data_from_file, expected_data)
+        # Удаляем файл после теста
+        os.remove('statistics.csv')
 
 if __name__ == '__main__':
     unittest.main()

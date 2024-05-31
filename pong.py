@@ -279,27 +279,22 @@ class PADDLE:
                 self.rect.y -= self.speed
 
 def write_statistics(value):
-        try:
-            with open('statistics.csv', 'a', newline='') as csvfile:
-                csv_writer = csv.writer(csvfile)
-                csv_writer.writerow(value)
+    with open('statistics.csv', 'a', newline='') as csvfile:
+        csv_writer = csv.writer(csvfile)
+        csv_writer.writerow(value)
                             
-            with open('statistics.csv', 'r', newline='') as csvfile:
-                csv_reader = csv.reader(csvfile)
-                data = list(csv_reader)
-                # Сортировка данных по третьему элементу
-                sorted_data = sorted(data, key=lambda x: x[2])
-                sorted_data = sorted_data[::-1]
+    with open('statistics.csv', 'r', newline='') as csvfile:
+        csv_reader = csv.reader(csvfile)
+        data = list(csv_reader)
+        # Сортировка данных по третьему элементу
+        sorted_data = sorted(data, key=lambda x: int(x[2]))
+        sorted_data = sorted_data[::-1]
 
-            # Запись отсортированных данных обратно в CSV файл
-            with open('statistics.csv', 'w', newline='') as csvfile:
-                csv_writer = csv.writer(csvfile)
-                csv_writer.writerows(sorted_data)
-        except:
-                with open('statistics.csv', 'a', newline='') as csvfile:
-                    csv_writer = csv.writer(csvfile)
-                    csv_writer.writerow(value)
-
+    # Запись отсортированных данных обратно в CSV файл
+    with open('statistics.csv', 'w', newline='') as csvfile:
+        csv_writer = csv.writer(csvfile)
+        csv_writer.writerows(sorted_data)
+    return sorted_data
 
 
 class BALL:
