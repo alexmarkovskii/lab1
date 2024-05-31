@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import patch
-from pong import BALL, PADDLE, write_statistics
+from units import BALL, PADDLE, write_statistics
 import pygame
 import csv
 import os
