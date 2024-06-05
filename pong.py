@@ -75,7 +75,7 @@ class MENU():
         self.menu_buttons = {
             'pc_game': BUTTON(self.width//2-300, 200, 600, 100, 'START VS PC', False, WHITE, 72),
             'user_game': BUTTON(self.width//2-300, 400, 600, 100, 'START VS USER', False, WHITE, 72),
-            'statistics': BUTTON(self.width//2-300, 600, 600, 100, 'VEIW STATISTICS', False, WHITE, 72),
+            # 'statistics': BUTTON(self.width//2-300, 600, 600, 100, 'VEIW STATISTICS', False, WHITE, 72),
             'exit': BUTTON(self.width//2-300, 800, 600, 100, 'QUIT', False, WHITE, 72)
         }
 
