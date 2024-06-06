@@ -75,7 +75,7 @@ class MENU():
         self.menu_buttons = {
             'pc_game': BUTTON(self.width//2-300, 200, 600, 100, 'START VS PC', False, WHITE, 72),
             'user_game': BUTTON(self.width//2-300, 400, 600, 100, 'START VS USER', False, WHITE, 72),
-            # 'statistics': BUTTON(self.width//2-300, 600, 600, 100, 'VEIW STATISTICS', False, WHITE, 72),
+            'statistics': BUTTON(self.width//2-300, 600, 600, 100, 'VEIW STATISTICS', False, WHITE, 72),
             'exit': BUTTON(self.width//2-300, 800, 600, 100, 'QUIT', False, WHITE, 72)
         }
 
@@ -112,13 +112,16 @@ class MENU():
                             print('pc_game')
                             self.opponent = 'pc'
                             self.draw_gamesettings()
+                            break
                         elif self.menu_buttons['user_game'].rect.collidepoint(event.pos):
                             print('user_game')
                             self.opponent = 'user'
                             self.draw_gamesettings()
+                            break
                         elif self.menu_buttons['statistics'].rect.collidepoint(event.pos):
                             self.draw_stats()
                             print('statistics')
+                            break
                         elif self.menu_buttons['exit'].rect.collidepoint(event.pos):
                             print('Exit...')
                             pygame.quit()
@@ -127,14 +130,41 @@ class MENU():
                             print('missclick')
     
     def draw_stats(self):
-        try:
-            print('User', 'Time', 'Score')
+        self.screen.fill(GRAY)
+        if os.path.exists('statistics.csv'):
+            stats = [['Name', 'Time', 'Score']]
+            back_button = BUTTON(self.width//4-200, self.height-150, 300, 100, 'BACK', False, WHITE, 72)
+            back_button.draw_button(self.screen)
+            font = pygame.font.Font(None, 72)
             with open('statistics.csv', 'r', newline='') as csvfile:
                 csv_reader = csv.reader(csvfile)
                 for row in csv_reader:
-                    print(row)      
-        except:
-            showinfo('Ошибка', "Отсутствует файл статистики, не было игр")            
+                    stats.append(row)
+            y_offset = 50
+            for row in stats:
+                x_offset = 50
+                for item in row:
+                    text = font.render(item, True, (255, 255, 255))
+                    self.screen.blit(text, (x_offset, y_offset))
+                    x_offset += 360
+                y_offset += 50
+            pygame.display.flip()
+            while True:
+                for event in pygame.event.get():
+                    if event.type == pygame.QUIT:
+                        print('Exit...')
+                        pygame.quit()
+                        sys.exit()
+                    elif event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
+                        self.draw_menu()
+                    elif event.type == pygame.MOUSEBUTTONDOWN:
+                        if back_button.rect.collidepoint(event.pos):
+                            self.draw_menu()
+
+        else:
+            showinfo('Ошибка', "Отсутствует файл статистики, не было игр")
+            self.draw_menu()
+   
 
     def draw_gamesettings(self):
         self.screen.fill(GRAY)
